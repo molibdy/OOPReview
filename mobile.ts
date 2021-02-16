@@ -69,8 +69,8 @@ export class Mobile{
         this.price;
     }
 
-    public printSpecs():string{
-        let specs:string=`The characteristics of the mobile ${this.name} are:
+    public printSpecs(){
+        let specs:string=`* The characteristics of the mobile ${this.name} are:
         \n    * Name: ${this.name}
         \n    * Model: ${this.model}
         \n    * Trademark: ${this.trademark}
@@ -78,6 +78,6 @@ export class Mobile{
         \n    * Color: ${this.color}
         \n    * is 5G?: ${this.is5G}
         \n    * Number of Cameras: ${this.cameraNumber} `
-        return specs;
+        console.log (specs);
     }
 }
