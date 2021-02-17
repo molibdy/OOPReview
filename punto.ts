@@ -37,11 +37,11 @@ export class Punto{
     }
 
     public calcularMasCercano(puntos:Punto[]):Punto{
-        let distanciaMenor:number=Math.sqrt(Math.pow(this.x-puntos[0].x,2)+Math.pow(this.y-puntos[0].y,2))
+        let distanciaMenor:number=this.calcularDistancia(puntos[0])
         let masCercano:Punto=puntos[0]
         for (let i=0;i<puntos.length;i++){
-            if(distanciaMenor>Math.sqrt(Math.pow(this.x-puntos[i].x,2)+Math.pow(this.y-puntos[i].y,2))){
-                distanciaMenor=Math.sqrt(Math.pow(this.x-puntos[i].x,2)+Math.pow(this.y-puntos[i].y,2));
+            if(distanciaMenor>this.calcularDistancia(puntos[i])){
+                distanciaMenor=this.calcularDistancia(puntos[0]);
                 masCercano=puntos[i];
             }
         }
